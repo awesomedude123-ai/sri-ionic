@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ item.firstName }} {{ item.lastName }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'"> </div>
+
+  <div class="item-detail" padding>
+    <h2>{{item.firstName}} {{item.lastName}}</h2>
+    <p> {{item.reason}} </p>
+    <button ion-button (click)="updateItem(item)">
+      <span color="warning" >
+        {{ 'UPDATE ITEM' | translate }}
+      </span>
+    </button>
+  </div>
+</ion-content>

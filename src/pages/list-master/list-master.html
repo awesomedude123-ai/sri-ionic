@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add"> </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <h2>{{item.rankings}}. {{item.firstName}} {{item.lastName}}</h2>
+        <p> {{item.team}} </p>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

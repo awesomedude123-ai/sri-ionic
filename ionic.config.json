@@ -1,0 +1,7 @@
+{
+  "name": "nflPlayerApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "ionic-angular"
+}
